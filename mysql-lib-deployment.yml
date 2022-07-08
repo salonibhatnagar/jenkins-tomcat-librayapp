@@ -25,8 +25,8 @@ spec: #inside your deployment we need to provide spec how this deployment api wi
                 valueFrom:
                   secretKeyRef:
                 #this two value come from mysqlsecret.yml 
-                    name: my-db-secret #this is the name of the secret
-                    key: db-password #data of the secret 
+                    name: db-root-credentials #this is the name of the secret
+                    key: password #data of the secret 
             ports:
               - containerPort: 3306
                 name: mysql
